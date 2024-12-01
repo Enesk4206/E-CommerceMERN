@@ -147,10 +147,14 @@ export const refreshToken =async (req, res) =>{
     }
 };
 
-// export const getProfile= async(req,res) =>{
-//     try {
-        
-//     } catch (error) {
-        
-//     }
-// } 
+export const getProfile= async(req,res) =>{
+    try {
+        res.json(req.user)      
+    } catch (error) {
+        console.log("Error in getProfile Auth Controller")
+        res.status(500).json({
+            success: false,
+            message:"Internal Server Error"
+        })   
+    }
+} 
