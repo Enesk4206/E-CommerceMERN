@@ -5,6 +5,7 @@ import SignUpPage from "./pages/SignUpPage"
 import HomePage from "./pages/HomePage"
 
 import Navbar from './components/Navbar'
+import { Toaster } from 'react-hot-toast'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path='/signup' element={<SignUpPage />} />
           <Route path='/login' element={<LoginPage />} />
         </Routes>
+        <Toaster/>
       </div>
     </div>
   )
